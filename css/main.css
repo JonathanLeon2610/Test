@@ -1,0 +1,127 @@
+/*HTML EN GENERAL*/
+html * {
+    font-family: 'Source Sans Pro', sans-serif;
+    margin: 0;
+}
+
+/*--------------------------------------*/
+/*HEADER*/
+header {
+    background-color: #032541;
+    width: 100%;
+    height: 64px;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.contentHeader {
+    max-width: 1400px;
+    height: 100%;
+    padding: 0 40px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contentHeader img {
+    width: 154px;
+    height: 20px;
+}
+
+.navLeft a {
+    margin-right: 30px;
+    font-weight: 600;
+} 
+
+.navRight span {
+    color: white;
+    border: 1px solid white;
+    border-radius: 3px;
+    padding: 3px 5px;
+    font-size: 0.9em;
+    text-transform: uppercase;
+}
+
+.navRight span:hover {
+    background-color: white;
+    color: #032541;
+}
+
+.navRight a, .navRight span {
+    margin-left: 30px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.icon-search {
+    color: #01b4e4;
+}
+
+/*--------------------------------------*/
+/*FOOTER*/
+footer {
+    background-image: radial-gradient(at 30% top, #031d33 0%, rgba(3,37,65, 1) 70%);
+    color: white;
+}
+
+footer li {
+    list-style-type: none;
+}
+
+.contentFooter {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.div-join {
+    text-align: right;
+    position: relative;
+    top: -36px;
+    right: 0;
+}
+
+.div-join img {
+    width: 130px;
+    height: 95px;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.div-join h3 {
+    position: relative;
+    top: 140px;
+    border-color: white;
+    background-color: white;
+    color: #01b4e4 !important;
+    font-size: 1.3em;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 5px;
+    padding: 8px 16px;
+    word-wrap: break-word;
+    cursor: pointer;
+}
+
+.div-listInfo h3 {
+    font-weight: bold;
+    font-size: 1.4em;
+    line-height: 1.4em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    margin: 0 0 4px 0;
+}
+
+.div-listInfo li {
+    font-size: 1em;
+    line-height: 1.4em;
+    cursor: pointer;
+}

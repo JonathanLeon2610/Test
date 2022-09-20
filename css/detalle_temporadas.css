@@ -1,0 +1,38 @@
+.card{
+	margin-left: 1.5%;
+	margin-right: 1.5%;
+	height: 15%;
+	width: auto;
+	text-align: left;
+	
+}
+.img-fluid {
+	border-radius: 20%;
+}
+
+.navbar{
+	margin-left: 1.5%;
+	margin-right: 1.5%;
+}
+.container-fluid{
+	background-color: rgb(59, 32, 65);
+	width: 100%;
+}
+.container-fluid img{
+	border-radius: 5%;
+}
+
+.navbar-brand{
+	font-size: 300%;
+	color: white;
+}
+.navbar-brand:hover{
+	color: gray
+}
+.accordion{
+	margin-left: 1.5%;
+	margin-right: 1.5%;
+}
+.row img{
+	border-radius: 5%;
+}
