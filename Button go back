@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/detalle_temporadas.css">
+    <link rel="stylesheet" href="css/main.css">
+   
+</head>
+<body>
+    <!-- Cargar Datos de las temporadas de la serie -->
+    <div id="contenedor" style="margin-top: 64px;">
+    <!-- Header -->
+    <header>
+        <div class="contentHeader">
+            <div class="navLeft">
+                <a :href="`../index.html`"><img src="img/logo-horizontal.png" alt=""></a><!-- Luego se cambiara el href, pendiente de modificar -->
+                <a>Movies</a>
+                <a>TV Shows</a>
+                <a>People</a>
+                <a>More</a>
+            </div>
+            <div class="navRight">
+                <a><i class="fa-solid fa-plus fa-lg"></i></a>
+                <span>en</span>
+                <a><i class="fa-solid fa-bell fa-lg"></i></a>
+                <a>'{username}'</a><!-- Aqui va ir el username de la cuenta con vue, pendiente de modificar  -->
+                <a class="icon-search"><i class="fa-solid fa-magnifying-glass fa-lg"></i></a>
+            </div>
+        </div>
+    </header>
+        <div>
+            <!-- Nombre de la serie -->
+            <nav class="navbar bg-light">
+                <div class="container-fluid">
+                    <a class="navbar-brand">
+                        <button type="button" onclick="window.history.back()" class="btn btn-light" style="margin-right:1% ;">← Go back</button>
+                        <img :src="'https://image.tmdb.org/t/p/w500/'+serie.poster_path" alt="No cuenta con imagen" width="200" height="250" class="d-inline-block align-text-top">
+                    {{serie.name}} 
+                    <br>
+                </a>
+
+                <small style="color: white;"><strong>Overview</strong>
+                    <br>{{serie.overview}}</small>
+                </div>
+            </nav>
+            <!-- Div para imprimir datos de cada temporada -->
+            <div class="card mb-3" v-for="season, index in temporadas">
+                <div class="row g-">
+                    <div class="col-md-4" style="max-width: 200px;">
+                    <img :src="'https://image.tmdb.org/t/p/w500/'+season.poster_path"  class="img-fluid rounded-start" alt="No cuenta con imagen">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <!-- Nombre de la temporada -->
+                        <h5 class="card-title"> {{season.name}}  | <small class="text-muted">Episodes: {{season.episode_count}}</small></h5>
+                        <!-- Reseña de cada capitulo de la temporada -->
+                        <p class="card-text">{{season.overview}}</p>
+                        <!-- Capitulos que contiene cada temporada -->
+                        <p class="card-text"><small class="text-muted">Release date: {{season.air_date}}</small></p>
+                        <p><a :href="`detalle_temporada_individual.html?serie=${serie.id}&season=${season.season_number}`">
+                            View Season Details
+                        </a></p>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Script de donde se cargan los datos -->
+    <script type="text/javascript" src="js/detalle_temporada.js">
+    </script>
+</body>
+<!-- Footer -->
+<footer>
+    <div class="contentFooter">
+        <div class="div-join">
+            <img src="img/logo-cuadrado.png" alt="">
+            <h3>Join the community</h3>
+        </div>
+        <div class="div-listInfo">
+            <h3>The Basics</h3>
+            <li>About TMDB</li>
+            <li>Contact Us</li>
+            <li>Support Forums</li>
+            <li>API</li>
+            <li>System Status</li>
+        </div>
+        <div class="div-listInfo">
+            <h3>Get Involved</h3>
+            <li>Contribution Bible</li>
+            <li>Add New Movie</li>
+            <li>Add New TV Show</li>
+        </div>
+        <div class="div-listInfo">
+            <h3>Community</h3>
+            <li>Guidelines</li>
+            <li>Discussions</li>
+            <li>Leaderboard</li>
+            <li>Twitter</li>
+        </div>
+        <div class="div-listInfo">
+            <h3>Legal</h3>
+            <li>Terms of Use</li>
+            <li>API Terms of Use</li>
+            <li>Privacy Policy</li>
+        </div>
+    </div>
+</footer>
+</html>
