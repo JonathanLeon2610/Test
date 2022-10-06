@@ -1,0 +1,25 @@
+@bgColor: #E48F72;
+@colores: #0275d8, #5cb85c, #5bc0de;
+
+.myBg(@color){
+	background-color: @color;
+}
+
+.container{
+	form{
+
+		.myBg('#5FDCE0');
+
+		fieldset{  
+			background-color:@bgColor;
+			button{
+				width: 60px;
+				min-height: 30px;
+				background-color:#527BDF;
+				color:white;
+			}
+		}
+	}
+}
+
+//lessc main.less > main.css
