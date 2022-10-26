@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>	
+    <link rel="stylesheet" type="text/css" href="mapa.css">
+    <link rel="stylesheet" type="text/css" href="Leaflet-MiniMap-master/dist/Control.MiniMap.min.css">
+    
+
+    <title>Albergues La Paz</title>
+    <h1>Albergues en la ciudad de La Paz</h1>
+
+    <select name="select-location" id="select-location">
+        <option value="-1">Seleccione un lugar</option>
+        <option value="24.07017555441043,-110.3181249680159,0">PRM ANTONIO VERDUGO VERDU</option>
+        <option value="24.07968459054228,-110.3017122038118,63.12444250920055">COLEGIO VALLADOLID</option>	
+		<option value="24.07201207597647,-110.300318514436,73.57486278426953">TABACHINES</option>
+		<option value="24.07639400305622,-110.3046603262177,60.5607125644048">ALBERGUE X</option>
+		<option value="24.147446,-110.281024">ESC. PRIM, EMMA I OSUNA</option>
+		<option value="24.146051,-110.287164">ESC PRIM VICENTE GUERRERO</option>
+		<option value="24.096472,-110.304561">ESC SEC PROF JOSE MA GARMA</option>
+		<option value="24.120679,-110.308485">INSTITUTO TECNOLOGICO DE LA PAZ/option>		
+		<option value="24.100514,-110.315113">UABCS</option>		
+		<option value="24.165587,-110.304904">SEC GABRIEL FCO OJEDA AGUNDEZ</option>	
+        <option value="24.136296,-110.289766">ESC SEC TECNICO NO 13</option>
+    </select>
+</head>
+<body>
+    
+    <div id="map"></div>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+   		integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+   		crossorigin=""></script>
+    <script src="Leaflet-MiniMap-master/dist/Control.MiniMap.min.js"></script>    
+    <script src="layers/puntos.js"></script>
+    <script src="mapa.js"></script>
+    
+
+</body>
+</html>
